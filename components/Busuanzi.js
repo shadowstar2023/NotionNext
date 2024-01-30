@@ -2,7 +2,7 @@ import busuanzi from '@/lib/busuanzi'
 import { useRouter } from 'next/router'
 import { useGlobal } from '@/lib/global'
 // import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import React from 'react'
 
 let path = ''
 
