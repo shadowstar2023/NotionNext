@@ -8,8 +8,8 @@ let path = ''
 
 export default function Busuanzi () {
   const { theme } = useGlobal()
-  const router = useRouter()
-  router.events.on('routeChangeComplete', (url, option) => {
+  const Router = useRouter()
+  Router.events.on('routeChangeComplete', (url, option) => {
     if (url !== path) {
       path = url
       busuanzi.fetch()
@@ -17,7 +17,7 @@ export default function Busuanzi () {
   })
 
   // 更换主题时更新
-  useEffect(() => {
+  React.useEffect(() => {
     if (theme) {
       busuanzi.fetch()
     }
